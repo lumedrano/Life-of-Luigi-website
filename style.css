@@ -165,7 +165,6 @@ input[type=text], select, textarea {
   border: none;
   cursor: pointer;
 }
-
 input[type=Submit]:hover {
   background-color: #45a049;
 } */
@@ -356,11 +355,9 @@ body {
   }
   
   .portfolioimages img, .portfolioimages video {
-  width: 200px;
-  height: auto;
-  margin-right: 20px;
-  margin-bottom: 20px;
-  float: left;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
   }
 
 
