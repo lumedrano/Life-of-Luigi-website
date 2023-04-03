@@ -337,7 +337,7 @@ body {
 .portfolio-row video {
   display: inline-block;
   width: auto;
-  max-width: 400px;
+  max-width: 200px;
   height: auto;
   margin-right: 20px;
   margin-bottom: 20px;
