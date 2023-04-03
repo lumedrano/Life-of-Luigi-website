@@ -353,7 +353,6 @@ body {
   .portfolioimages {
     display: block;
   }
-}
   .portfolioimages img, .portfolioimages video {
   width: 200px;
   height: auto;
@@ -361,7 +360,7 @@ body {
   margin-bottom: 20px;
   float: left;
   }
-
+}
 
 
 
