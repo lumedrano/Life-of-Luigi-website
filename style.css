@@ -347,24 +347,29 @@ body {
 
 
 
-.profilepic{
-    width: 300px;
-    position: absolute;
-    left: 100px;
+/*about me info and profile pic */
+.about-me {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-
-
-.aboutmeheader{
-    position: absolute;
-    left: 50%;
-    top: 25%;
+.profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-.aboutmeinfo{
-    position: absolute;
-    left: 30%;
-    top: 30%;
+.profile img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.about-me p {
+  font-size: 20px;
+  line-height: 1.5;
 }
 
 
@@ -423,3 +428,4 @@ body {
 
 
 
+}
