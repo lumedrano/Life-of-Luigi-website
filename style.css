@@ -349,10 +349,10 @@ body {
   border-radius: 5px;
 }
 
-.portfolioimages figcaption {
-  font-size: 16px;
-  margin-top: 10px;
-  color: #777;
+@media screen and (max-width: 768px) {
+  .portfolioimages figcaption {
+    margin-top: 20px;
+  }
 }
 
 @media screen and (max-width: 768px) {
