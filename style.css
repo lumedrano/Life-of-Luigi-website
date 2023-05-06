@@ -349,7 +349,7 @@ body {
   border-radius: 5px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
   .portfolioimages figcaption {
     margin-top: 20px;
   }
