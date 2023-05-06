@@ -335,7 +335,7 @@ body {
 }
 
 .portfolioimages img {
-  width: 300px;
+  width: 400px;
   height: 200px;
   object-fit: cover;
   border: 1px solid #ddd;
@@ -343,7 +343,7 @@ body {
 }
 
 .portfolioimages video {
-  width: 300px;
+  width: 400px;
   height: 200px;
   border: 1px solid #ddd;
   border-radius: 5px;
