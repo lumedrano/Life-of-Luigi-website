@@ -28,7 +28,7 @@ nav img{
     top: 50%;
     transform: translate(-50%,-50%);
     align-content: center;
-    width: 250vw;
+    width: 250px;
     
 }
 .nav-links{
@@ -53,7 +53,7 @@ nav img{
 .nav-links ul li::after{
     content:'';
     width: 0%;
-    height: 2vh;
+    height: 2px;
     background: orange;
     display: block;
     margin:auto;
@@ -65,7 +65,7 @@ nav img{
 }
 
 .text-box{
-    font-size: 24vw;
+    font-size: 24px;
     width: 90%;
     color: white;
     position: absolute;
