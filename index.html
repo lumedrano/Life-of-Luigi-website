@@ -24,11 +24,14 @@
          <div class="wrap">
     <div class="static-txt">I'm a</div>
     <ul class="dynamic-txts">
-      <li><span>Student at UT Austin</span></li>
-      <li><span>Software Engineer</span></li>
+      <li><span>Student at</span></li>
+      <li><span>UT Austin</span></li>
+      <li><span>Software</span></li>
+      <li><span>Engineer</span></li>
     </ul>
         </div> 
 
+        
         <nav>
             <div class="nav-links">
               <ul class="desktop-menu">
@@ -57,6 +60,15 @@
 
 
     
-</section>      
+</section>  
+<script>
+    // JavaScript code goes here
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    mobileMenu.addEventListener('change', function() {
+      const selectedOption = mobileMenu.options[mobileMenu.selectedIndex].value;
+      window.location.href = selectedOption;
+    });
+  </script>    
 </body>
 </html>
