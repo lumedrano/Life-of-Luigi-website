@@ -1,56 +1,3 @@
-@keyframes appear {
-  0% {
-      transform: translateY(-15%);
-      -webkit-transform: translateY(-15%);
-      -o-transform: translateY(-15%); 
-      -moz-transform: translateY(-15%);
-      opacity: 0%;
-  }
-  100% {
-      transform: translateY(0);
-      -webkit-transform: translateY(0);
-      -o-transform: translateY(0); 
-      -moz-transform: translateY(0);
-      opacity: 100%;
-  }
-}
-
-@keyframes appear2 {
-  0% {
-      transform: translateY(-15%);
-      -webkit-transform: translateY(-15%);
-      -o-transform: translateY(-15%); 
-      -moz-transform: translateY(-15%);
-      opacity: 0%;
-  }
-  66% {
-      transform: translateY(-15%);
-      -webkit-transform: translateY(-15%);
-      -o-transform: translateY(-15%); 
-      -moz-transform: translateY(-15%);
-      opacity: 0%;
-  }
-  100% {
-      transform: translateY(0);
-      -webkit-transform: translateY(0);
-      -o-transform: translateY(0); 
-      -moz-transform: translateY(0);
-      opacity: 100%;
-  }
-}
-
-@keyframes line-appear {
-  0% {
-      width: 0%;
-  }
-  33% {
-      width: 0%;
-  }
-  100% {
-      width: calc(10em + 10vw);
-  }
-}
-
 *{
   margin:0;
 padding: 0;
@@ -84,48 +31,98 @@ nav img{
     width: 250px;
     
 }
-.nav-links{
-    flex: 1;    
+
+@media (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+  .nav-links {
+    flex: 1;
     text-align: right;
-}
-
-.nav-links ul li{
+  }
+  .nav-links ul {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .nav-links ul li {
     list-style: none;
-    display:inline-block;
     padding: 8px 12px;
-    position: relative;
-}
-
-.nav-links ul li a{
+  }
+  .nav-links ul li a {
     color: white;
     text-decoration: none;
     font-size: 13px;
-}
-
-.nav-links ul li::after{
-    content:'';
+  }
+  .nav-links ul li::after {
+    content: '';
     width: 0%;
     height: 2px;
     background: orange;
     display: block;
-    margin:auto;
+    margin: auto;
     transition: 0.5s;
-}
-
-.nav-links ul li:hover::after{
+  }
+  .nav-links ul li:hover::after {
     width: 100%;
+  }
 }
 
-.text-box{
-    font-size: 24px;
-    width: 90%;
-    color: white;
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+@media (max-width: 767px) {
+  /* Styles for mobile view */
+  .desktop-menu {
+    display: none;
+  }
+  .nav-links {
     text-align: center;
+  }
+  .mobile-menu {
+    display: block;
+    margin: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    font-size: 13px;
+  }
+  .mobile-menu option {
+    padding: 8px 12px;
+  }
+  .mobile-menu:focus {
+    outline: none;
+  }
+  .nav-links ul li {
+    display: none;
+  }
+  .nav-links ul li:last-child {
+    display: inline-block;
+  }
+  .nav-links ul li:last-child a {
+    padding-right: 0;
+  }
+  .nav-links ul li:hover,
+  .mobile-menu option:hover {
+    background-color: orange;
+  }
+  .nav-links ul li:hover a,
+  .mobile-menu option:hover {
+    color: black;
+  }
 }
+
+
+
+
+
+.text-box {
+  font-size: 24px;
+  width: 90%;
+  color: white;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
 
 
 
@@ -292,8 +289,16 @@ input[type=Submit]:hover {
   --text-color: hsl(0, 0%, 100%);
 }
 body {
-  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+html, body{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+/* LUIGI sign that is supposed to be at the front of the page*/
 .wrapper {
   display: grid;
   place-content: center;
@@ -312,8 +317,9 @@ body {
 .top {
   clip-path: polygon(0% 0%, 100% 0%, 100% 48%, 0% 58%);
     position: relative;
-    top: 100px;
-    left: 400px;
+    left: 25px;
+    top: 500px;
+    align-items: center;
 }
 .bottom {
   clip-path: polygon(0% 60%, 100% 50%, 100% 100%, 0% 100%);
@@ -324,8 +330,9 @@ body {
   -webkit-background-clip: text;
   transform: translateX(-0.02em);
   position: relative;
-    top: 100px;
-    left: 400px;
+  align-items: center;
+  left: 25px;
+  top: 500px;
 }
 
 
@@ -426,15 +433,13 @@ body {
 
 
 
-.wrap{
+.wrap {
   display: flex;
-    position: absolute;
-    top: 300px;
-    left:400px;
-
-<<<<<<< HEAD
-}
-=======
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; 
+  text-align: center;
 }
 .wrap .static-txt{
   color: white;
@@ -482,6 +487,6 @@ body {
   }
   100%{
     left: 0;
-  }
+  } 
 }
 

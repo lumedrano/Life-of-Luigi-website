@@ -6,19 +6,14 @@
     <title>World of Luigi</title>
     <link rel="stylesheet" href ="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <script>src="handler.js"</script>
 </head>
 <body>
 
-<!--- music controls
-<audio controls loop autoplay>
-    <source src="Music/Sheck%20Wes%20-%20Mo%20Bamba.mp3" type="audio/mp3">
-</audio>--->
-
 
 <section class="header">
-    <nav>
         <section class="wrapper">
          <div class="top">Lui</div>
   <div class="bottom" aria-hidden="true">Luigi</div>
@@ -32,27 +27,35 @@
       <li><span>Student at UT Austin</span></li>
       <li><span>Software Engineer</span></li>
     </ul>
-        </div>  
-        
-        
-        
-        <div class="nav-links">
-            <ul>
+        </div> 
+
+        <nav>
+            <div class="nav-links">
+              <ul class="desktop-menu">
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="About%20Me.html">ABOUT ME</a></li>
-                 <li>  <a href="Resume.html">RESUME</a></li>
-                 <li><a href="https://github.com/lumedrano">MY GITHUB</a></li>
-                  <li><a href="Contact.html">CONTACT</a></li>
-            </ul>
-        </div>
-    </nav>  
+                <li><a href="Resume.html">RESUME</a></li>
+                <li><a href="https://github.com/lumedrano">MY GITHUB</a></li>
+                <li><a href="Contact.html">CONTACT</a></li>
+              </ul>
+              <select class="mobile-menu">
+                <option value="index.html">HOME</option>
+                <option value="About%20Me.html">ABOUT ME</option>
+                <option value="Resume.html">RESUME</option>
+                <option value="https://github.com/lumedrano">MY GITHUB</option>
+                <option value="Contact.html">CONTACT</option>
+              </select>
+            </div>
+          </nav>
+          
     
 
 <div class="text-box">
     <h1>Welcome to my Life!</h1>
     <p>Get to know more about me and what I have done so far.</p>
 </div>    
-    
+
+
     
 </section>      
 </body>
