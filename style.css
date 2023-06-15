@@ -69,6 +69,11 @@ nav img{
   .nav-links ul li:hover::after {
     width: 100%;
   }
+
+  .nav-links ul li a.active {
+    color: black;
+  }
+  
 }
 
 @media (max-width: 767px) {
@@ -113,6 +118,10 @@ nav img{
   .mobile-menu option:hover {
     color: black;
   }
+  .nav-links ul li a.active {
+    color: black;
+  }
+  
 }
 
 
