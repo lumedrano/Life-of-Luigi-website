@@ -41,7 +41,7 @@ nav img{
     content: '';
     width: 0%;
     height: 2px;
-    background: #f44336;
+    background: orange;
     display: block;
     margin: auto;
     transition: .5s;    
@@ -84,8 +84,8 @@ nav .fa{
 }
 
 .hero-btn:hover{
-    border: 1px solid #f44336;
-    background: #f44336;
+    border: 1px orange;
+    background: orange;
 }
 
 
@@ -98,7 +98,7 @@ nav .fa{
     .nav-links
     {
         position: fixed;
-        background: #f44336;
+        background: orange;
         height: 100vh;
         width: 200px;
         top: 0;
@@ -121,6 +121,9 @@ nav .fa{
         font-size: 20px;
     }
 }
+
+
+
 
 /*---------- course --------*/
 
