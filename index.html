@@ -1,74 +1,187 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>World of Luigi</title>
-    <link rel="stylesheet" href ="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
-    <script>src="handler.js"</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>World of Luigi</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
 </head>
 <body>
-
-
-<section class="header">
-        <section class="wrapper">
-         <div class="top">Lui</div>
-  <div class="bottom" aria-hidden="true">Luigi</div>
-        </section> 
-        
-        
-        
-         <div class="wrap">
-    <div class="static-txt">I'm a</div>
-    <ul class="dynamic-txts">
-      <li><span>Student at</span></li>
-      <li><span>UT Austin</span></li>
-      <li><span>Software</span></li>
-      <li><span>Engineer</span></li>
-    </ul>
-        </div> 
-
+    <section class="header">
         
         <nav>
-            <div class="nav-links">
-              <ul class="desktop-menu">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="About%20Me.html">ABOUT ME</a></li>
-                <li><a href="Resume.html">RESUME</a></li>
-                <li><a href="https://github.com/lumedrano">MY GITHUB</a></li>
-                <li><a href="Contact.html">CONTACT</a></li>
-              </ul>
-              <select class="mobile-menu">
-                <option value="index.html">HOME</option>
-                <option value="About%20Me.html">ABOUT ME</option>
-                <option value="Resume.html">RESUME</option>
-                <option value="https://github.com/lumedrano">MY GITHUB</option>
-                <option value="Contact.html">CONTACT</option>
-              </select>
+            <!-- <a href="index.html"><img src="images/logo.png"></a> -->
+            <div class="nav-links" id="navLinks">  
+                <i class="fa fa-close" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT ME</a></li>
+                    <li><a href="resume.html"> RESUME</a></li>
+                    <li><a href="https://github.com/lumedrano">MY GITHUB</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
             </div>
-          </nav>
-          
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        
+        <div class="text-box">
+            <h1>Welcome to my Life!</h1>
+            <p>Get to know more about me and what I have done so far.</p>
+            <a href="about.html" class="hero-btn">Lets get to it!</a>
+        </div>
+    </section>
     
-
-<div class="text-box">
-    <h1>Welcome to my Life!</h1>
-    <p>Get to know more about me and what I have done so far.</p>
-</div>    
-
-
+<!---------- course ----------->
     
-</section>  
+    <!-- <section class="course">
+        <h1>Courses We Offer</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <div class="row">
+            <div class="course-col">
+                <h3>Intermediate</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet turpis nulla, eleifend faucibus est sollicitudin ut. Maecenas ut venenatis ex, et dapibus purus Donec sit.</p>
+            </div>
+            <div class="course-col">
+                <h3>Degree</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet turpis nulla, eleifend faucibus est sollicitudin ut. Maecenas ut venenatis ex, et dapibus purus Donec sit.</p>
+            </div>
+            <div class="course-col">
+                <h3>Post Graduation</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet turpis nulla, eleifend faucibus est sollicitudin ut. Maecenas ut venenatis ex, et dapibus purus Donec sit.</p>
+            </div>
+        </div>
+    </section> -->
+    
+<!---------- campus ---------->
+    
+    <!-- <section class="campus">
+        <h1>Our Global campus</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div class="row">
+                <div class="campus-col">
+                    <img src="images/london.png">
+                    <div class="layer">
+                        <h3>LONDON</h3>
+                    </div>
+                </div>
+                <div class="campus-col">
+                    <img src="images/newyork.png">
+                    <div class="layer">
+                        <h3>NEW YORK</h3>
+                    </div>
+                </div>
+                <div class="campus-col">
+                    <img src="images/washington.png">
+                    <div class="layer">
+                        <h3>WASHINGTON</h3>
+                    </div>
+                </div>
+                
+            </div>
+    </section> -->
+    
+<!---------- Facilities ---------->
+    
+    <!-- <section class="facility">
+        <h1>Our Facilities</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div class="row">
+                <div class="facility-col">
+                    <img src="images/library.png">
+                    <h3>World Class Library</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet turpis nulla.</p>
+                </div>
+                <div class="facility-col">
+                    <img src="images/basketball.png">
+                    <h3>Largest Play Ground</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet turpis nulla.</p>
+                </div>
+                <div class="facility-col">
+                    <img src="images/cafeteria.png">
+                    <h3>Tasty and Healthy Food</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet turpis nulla.</p>
+                </div>
+            </div>
+    </section> -->
+    
+    
+<!---------- testimonials ---------->
+    
+    <!-- <section class="testimonials">
+        <h1>What Our Student Says</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div class="row">
+                <div class="testimonial-col">
+                    <img src="images/user1.jpg">
+                    <div> 
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet turpis nulla, eleifend faucibus est sollicitudin ut. Maecenas ut venenatis ex, et dapibus purus.</p>
+                        <h3>Christine Berkley</h3>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                </div>
+                <div class="testimonial-col">
+                    <img src="images/user2.jpg">
+                    <div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet turpis nulla, eleifend faucibus est sollicitudin ut. Maecenas ut venenatis ex, et dapibus purus.</p>
+                        <h3>David Byer</h3>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+                </div>
+                
+            </div>
+    </section> -->
+    
+<!------ Call To Action ------>
+
+<!-- <section class="cta">
+    
+       <h1>Enroll For Our Various Online Courses<br>Anywhere From The World</h1>
+        <a href="https://www.youtube.com/c/EasyTutorialsVideo?sub_confirmation=1" class="hero-btn">CONTACT US</a>
+    
+</section>     -->
+ 
+<!-------- footer ---------->
+
+<section class="footer">
+        <h4>Media and More</h4>
+        <p>Feel free to connect with me on LinkedIn, Instagram, or take a look at some of my projects on Github!</p>
+        <div class="icons">
+            <a href="https://www.instagram.com/luigi_med03/"><i class="fa fa-instagram"></i></a>
+            <a href="www.linkedin.com/in/luigi-medrano"><i class="fa fa-linkedin"></i></a>
+            <a href="https://github.com/lumedrano"><i class="fa fa-github"></i></a>
+      
+            
+        </div>
+</section>    
+  
+  
+<!----JavaScript for toggle menu---->
 <script>
-    // JavaScript code goes here
-    const mobileMenu = document.querySelector('.mobile-menu');
+    var navLinks = document.getElementById("navLinks");
 
-    mobileMenu.addEventListener('change', function() {
-      const selectedOption = mobileMenu.options[mobileMenu.selectedIndex].value;
-      window.location.href = selectedOption;
-    });
-  </script>    
+    function showMenu() {
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu() {
+        navLinks.style.right = "-200px";
+    }
+</script> 
+    
 </body>
 </html>
+
+
+
+
+
+
+

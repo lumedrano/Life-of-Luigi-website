@@ -1,0 +1,124 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>World of Luigi</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <div class="nav-links" id="navLinks">  
+                <i class="fa fa-close" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT ME</a></li>
+                    <li><a href="resume.html"> RESUME</a></li>
+                    <li><a href="https://github.com/lumedrano">MY GITHUB</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>   
+            <h1>About Me</h1>
+    </section>
+    
+<!-- who am I typer animation-->
+<section class="about-us" style="width: 100%; height: 30%;">
+    <div class="wrap">
+        <div class="static-txt">Who am I?</div>
+        <div class="static-txt">I'm a</div>
+        <ul class="dynamic-txts">
+          <li><span>Student at UT Austin</span></li>
+          <li><span>Software Engineer</span></li>
+        </ul>
+    </div> 
+</section>
+
+<!------- about us content -------->
+    
+<section class="about-us">
+    <div class="row">
+        <div class="about-col">
+            <h1>About Me</h1>     
+            <p>Hello, my name is Luigi Medrano! I am a third-year Electrical & Computer Engineering Student at The University of Texas at Austin. My primary focus within ECE is Software Engineering as I have an extensive background in multiple languages which include C/C++, Python, Java, HTML, LABVIEW, and ARM Assembly. I am interested in working within a variety of industries as an automation, avionics, or robotics software engineer.</p>
+            <p>If you would like to take a look into some of my past projects then feel free to scroll down or if you would like to contact me then please feel free to reach out <a href="Contact.html">here</a>.</p>
+
+        </div>
+        <div class="about-col">
+            <img src="images/ProfilePic.jpg" style="border-radius: 50%; height: 420px; width: 300px;">
+        </div>
+    </div>    
+</section>
+
+
+<section class="course">
+    <h1>Projects and Experiences</h1>
+    <p>Listed are some of the projects I have been a part of that have contributed to my skills.</p>
+    <div class="row_portfolio_photos">
+        <div class="course-col">
+            <h3>Blue Origin Internship AI Model Project</h3>
+            <img src="images/bluegpt.png" class="bluegpt_photo">
+            <p>This project was centered around creating an AI model for Blue Origin Aerospace. I was able to design this chatbot from scratch using TensorFlow and PyTorch along with other various frameworks without using plug ins. The result was a fully operational chatbot that was released company wide increasing productivity by 80%!</p>
+        </div>
+        <div class="course-col">
+            <h3>ECE319K Final Embedded Systems Lab</h3>
+            <img src="images/319circuitboard.jpg" class="EE319K_photo">
+            <p>For our final project of the semester, my partner and I implemented DAC, ADC, Serial COM, C Programming, and more to implement our video game.</p>
+        </div>
+        <!-- next three use same class for sizing-->
+        <div class="course-col">
+            <h3>Space Invaders using C Programming</h3>
+            <img src="images/319spaceinv.jpg" class="spaceinv_photo">
+            <p>Upon finishing our circuit board, we moved onto programming the movements in C to achieve a bit mapping front-end with a multi-functional IO backend.</p>
+        </div>
+        <div class="course-col">
+            <h3>Block Detection Algorithm (TensorFlowObjecDetection)</h3>
+            <video controls class="spaceinv_photo"><source src="images/blocksensingvid.MP4"></video>
+            <p>In FTC Robotics the originally provided TF code for object detection was not the best. To do better, I created an algorithm that would quick sort a single frame, take the middle pixels, and find the darkest area in comparison to its distance towards the half point. This would allow us to have quick and efficient sensing in matches</p>
+        </div>
+        <div controls class="course-col">
+            <h3>Robot Design and Programming Competition</h3>
+            <video controls class="spaceinv_photo"><source src="images/initdesignbot.MOV"></video>
+            <p>For the beginning of the season, I designed a robot with my team but led the software side to prepare an autonomous and teleoperational script to run and accomplish over 80% of tasks in one week after game reveal.</p>
+        </div>
+        <div class="course-col">
+            <h3>3 day built robot for Regionals</h3>
+            <img src="images/newbot.jpg" class="three_day_robot_photo">
+            <p>As my team went to the half way point of the season we decided to completely rebuild our bot to have more capabilities than before. We tore down everything from its lifting mechanism to its electronics. From there I planned as captain to designate 3 days, each for one section of the bot. First day would be base, second would be lifting mechanism, and last would be electronics. Doing so we had a 60% increase in point scoring with a ticket to state!</p>
+        </div>
+    </div>
+</section>
+
+
+<!-------- footer ---------->
+
+<section class="footer">
+    <h4>Media and More</h4>
+    <p>Feel free to connect with me on LinkedIn, Instagram, or take a look at some of my projects on Github!</p>
+    <div class="icons">
+        <a href="https://www.instagram.com/luigi_med03/"><i class="fa fa-instagram"></i></a>
+        <a href="www.linkedin.com/in/luigi-medrano"><i class="fa fa-linkedin"></i></a>
+        <a href="https://github.com/lumedrano"><i class="fa fa-github"></i></a>
+  
+        
+    </div>
+</section>       
+  
+  
+<!----JavaScript for toggle menu---->
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu() {
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu() {
+        navLinks.style.right = "-200px";
+    }
+</script> 
+    
+</body>
+</html>    
