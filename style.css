@@ -13,6 +13,49 @@
     overflow: hidden;
 }
 
+.announcement {
+  min-height: 50vh;
+  width: 100%;
+  background-image: url(images/slangaibanner.png);
+  background-position: center;
+  background-size: 100% 100%;
+  position: relative;
+  overflow: hidden;
+  animation: fade-in-background 10s ease-in-out infinite;
+}
+
+@keyframes fade-in-text {
+   0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  90% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+}
+
+@keyframes fade-in-background {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
 nav{
     display: flex;
     padding: 2% 4%;
