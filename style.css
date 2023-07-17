@@ -455,6 +455,39 @@ h3{
     color: #f44336;
 }
 
+/*--------------- SLANG AI Dev Page -----------*/
+.slang_dev_logo{
+    height: 250px; 
+    width: 600px;
+}
+@media(max-width:700px){
+    .slang_dev_logo{
+        height: 125px; 
+        width: 300px;
+    }
+}
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+  }
+  
+  .reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
+.dev_photo.expanded,
+.dev_video.expanded {
+    height: 400px; /* Adjust the value as needed for the expanded height */
+}
+  .dev_photo,
+  .dev_video {
+      align-content: center;
+      height: 200px; /* Adjust the value as needed */
+      width: auto;
+      transition: height 0.3s ease;
+  }
 
 /*--------------- About Us Page --------------*/
 .wrap {
