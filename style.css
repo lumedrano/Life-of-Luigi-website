@@ -457,8 +457,8 @@ h3{
 
 /*--------------- SLANG AI Dev Page -----------*/
 .slang_dev_logo{
-    height: 400px; 
-    width: 100px;
+    height: 500px; 
+    width: 200px;
 }
 .demo_vid{
     height: 420px; 
@@ -466,8 +466,8 @@ h3{
 }
 @media(max-width:700px){
     .slang_dev_logo{
-        height: 200px; 
-        width: 50px;
+        height: 250px; 
+        width: 100px;
     }
     .demo_vid{
         height: 210px; 
