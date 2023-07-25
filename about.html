@@ -2,7 +2,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>I Am Luigi</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="assets/stylesheets/style.css">
 <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
 </head>
@@ -39,7 +39,7 @@
 
 <!------- about us content -------->
     
-<section class="about-us">
+<section class="about-us reveal">
     <div class="row">
         <div class="about-col">
             <h1>About Me</h1>     
@@ -48,45 +48,45 @@
 
         </div>
         <div class="about-col">
-            <img src="images/ProfilePic.jpg" style="border-radius: 50%; height: 420px; width: 300px;">
+            <img src="assets/images/ProfilePic.jpg" style="border-radius: 50%; height: 420px; width: 300px;">
         </div>
     </div>    
 </section>
 
 
-<section class="course">
+<section class="course reveal">
     <h1>Projects and Experiences</h1>
     <p>Listed are some of the projects I have been a part of that have contributed to my skills.</p>
     <div class="row_portfolio_photos">
         <div class="course-col">
             <h3>Blue Origin Internship AI Model Project</h3>
-            <img src="images/bluegpt.png" class="bluegpt_photo">
+            <img src="assets/images/bluegpt.png" class="bluegpt_photo project_photos" onclick="toggleExpand(this)">
             <p>This project was centered around creating an AI model for Blue Origin Aerospace. I was able to design this chatbot from scratch using TensorFlow and PyTorch along with other various frameworks without using plug ins. The result was a fully operational chatbot that was released company wide increasing productivity by 80%!</p>
         </div>
         <div class="course-col">
             <h3>ECE319K Final Embedded Systems Lab</h3>
-            <img src="images/319circuitboard.jpg" class="EE319K_photo">
+            <img src="assets/images/319circuitboard.jpg" class="EE319K_photo project_photos" onclick="toggleExpand(this)">
             <p>For our final project of the semester, my partner and I implemented DAC, ADC, Serial COM, C Programming, and more to implement our video game.</p>
         </div>
         <!-- next three use same class for sizing-->
         <div class="course-col">
             <h3>Space Invaders using C Programming</h3>
-            <img src="images/319spaceinv.jpg" class="spaceinv_photo">
+            <img src="assets/images/319spaceinv.jpg" class="spaceinv_photo project_photos" onclick="toggleExpand(this)">
             <p>Upon finishing our circuit board, we moved onto programming the movements in C to achieve a bit mapping front-end with a multi-functional IO backend.</p>
         </div>
         <div class="course-col">
             <h3>Block Detection Algorithm (TensorFlowObjecDetection)</h3>
-            <video controls class="spaceinv_photo"><source src="images/blocksensingvid.MP4"></video>
+            <video controls class="spaceinv_photo project_photos"><source src="assets/images/blocksensingvid.MP4" onclick="toggleExpand(this)"></video>
             <p>In FTC Robotics the originally provided TF code for object detection was not the best. To do better, I created an algorithm that would quick sort a single frame, take the middle pixels, and find the darkest area in comparison to its distance towards the half point. This would allow us to have quick and efficient sensing in matches</p>
         </div>
         <div controls class="course-col">
             <h3>Robot Design and Programming Competition</h3>
-            <video controls class="spaceinv_photo"><source src="images/initdesignbot.MOV"></video>
+            <video controls class="spaceinv_photo project_photos"><source src="assets/images/initdesignbot.MOV" onclick="toggleExpand(this)"></video>
             <p>For the beginning of the season, I designed a robot with my team but led the software side to prepare an autonomous and teleoperational script to run and accomplish over 80% of tasks in one week after game reveal.</p>
         </div>
         <div class="course-col">
             <h3>3 day built robot for Regionals</h3>
-            <img src="images/newbot.jpg" class="three_day_robot_photo">
+            <img src="assets/images/newbot.jpg" class="three_day_robot_photo project_photos" onclick="toggleExpand(this)">
             <p>As my team went to the half way point of the season we decided to completely rebuild our bot to have more capabilities than before. We tore down everything from its lifting mechanism to its electronics. From there I planned as captain to designate 3 days, each for one section of the bot. First day would be base, second would be lifting mechanism, and last would be electronics. Doing so we had a 60% increase in point scoring with a ticket to state!</p>
         </div>
     </div>
@@ -109,17 +109,7 @@
   
   
 <!----JavaScript for toggle menu---->
-<script>
-    var navLinks = document.getElementById("navLinks");
-
-    function showMenu() {
-        navLinks.style.right = "0";
-    }
-
-    function hideMenu() {
-        navLinks.style.right = "-200px";
-    }
-</script> 
+<script src="assets/javascripts/script.js"></script> 
     
 </body>
 </html>    

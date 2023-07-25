@@ -2,7 +2,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>I Am Luigi</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="assets/stylesheets/style.css">
 <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
 </head>
@@ -34,14 +34,13 @@
             <p>Traditionally, sign language translation tools have been limited to a unidirectional approach, converting sign gestures into written or spoken text. While these solutions have undoubtedly been transformative for the deaf and hard-of-hearing communities, there has been a crucial missing link in the process - enabling the translation of spoken or written text back into sign language. S.lang AI bridges this gap with unparalleled proficiency.</p>
         </div>
         <div class="about-col">
-            <img class="slang_dev_logo" src="images/logo.png">
+            <img class="slang_dev_logo" src="assets/images/logo.png">
         </div>
     </div>
 </section>
 
 
 <!---- What to expect content---->
-<!---- TODO: work on getting bulletpoints structured on left side of page & get animation working--------->
 <section>
     <div class="row reveal">
         <div class="about_col">
@@ -52,7 +51,7 @@
             <p class="slide-in-left">- <strong>Learning:</strong> As an AI/ML-based solution, S.lang AI continues to learn and improve over time. Regular updates and improvements based on user feedback and advancements in the field of AI and sign language research ensure that the software remains at the forefront of technology.</p>
         </div>
         <div class="about-col">
-            <video controls autoplay loop muted class="demo_vid"><source src="images/demo-video.mp4"></video>
+            <video controls autoplay loop muted class="demo_vid"><source src="assets/images/demo-video.mp4"></video>
         </div>
     </div>
 </section>
@@ -65,35 +64,55 @@
             <p>- <strong>Captures Video Frames:</strong> The software begins by capturing real-time video frames from an input source, such as a webcam or a pre-recorded video. OpenCV, a popular open-source computer vision library, provides the necessary tools to access video streams and individual frames.</p>
             <p>- <strong>Hand Detection and Tracking with MediaPipe:</strong> MediaPipe, developed by Google, is a powerful framework for building multimodal applied machine learning pipelines. This software utilizes MediaPipe's Hand Tracking module to detect and track hands within each video frame. This process involves identifying key landmarks on the hand, such as fingertips, knuckles, and wrist, using a machine learning-based hand pose estimation model. The model is capable of robustly tracking hands even under various orientations, lighting conditions, and occlusions.</p>
             <p>- <strong>Hand Gesture Classification:</strong> Once MediaPipe successfully tracks the hand landmarks, the software extracts relevant hand features and encodes them into a suitable representation for classification. These features may include the spatial positions of fingers, angles between joints, or any other relevant information that characterizes different hand gestures.</p>
-            <p>- <strong>Translation and Output:</strong> Once the classifier determines the most probable hand gesture from the extracted features, S.lang translates it into the corresponding letter or symbol in the chosen sign language. The output can be displayed on the screen or audibly communicated through text-to-speech synthesis, depending on the intended use of the application.</p>
+            <p>- <strong>Translation and Output:</strong> Once the classifier determines the most probable hand gesture from the extracted features, S.lang translates it into the corresponding letter or symbol in the chosen sign language. The output is then displayed to the screen for the other user to comprehend.</p>
+            <p>- <strong>Text to Gesture</strong> As for the other user, if they would like to communicate back in sign language, they would simply input a prompt or their text to generate unique images corresponding to the input text. What makes this possible is our trained GAN model that runs on two neural networks to generate new, replicated instances of data. Read more about it <a href="#GAN" class="scroll-link">here</a></p> <!--edit here work to link to section of html page talking about GAN model-->
             <p>- <strong>Real-Time Performace</strong> One of the key strengths of your software is its real-time performance. By leveraging efficient algorithms and optimizations provided by OpenCV and MediaPipe, this application can process video frames rapidly, providing instantaneous hand gesture recognition and translation.</p>
         </div>
     </div>
-    <div class="row_portfolio_photos">
+    <div class="row_portfolio_photos reveal">
         <div class="course-col">
             <h3 style="text-align: left;">Training/Testing Accuracy</h3>
-            <img src="images/slangai_accuracy2.png" class="dev_photo" onclick="toggleExpand(this)">
+            <img src="assets/images/slangai_accuracy2.png" class="dev_photo" onclick="toggleExpand(this)">
             <p>When Training and Testing, the results for the first iteration were promising. The training portion came back at <strong>100%</strong> while the testing came back at about <strong>99.22%</strong> for a near perfectly trained model without overfitting.</p>
         </div>
         <div class="course-col">
             <h3 style="text-align: left;">Landmark Drawing</h3>
-            <img src="images/screenshot_letter(A).jpg" class="dev_photo" onclick="toggleExpand(this)">
+            <img src="assets/images/screenshot_letter(A).jpg" class="dev_photo" onclick="toggleExpand(this)">
             <p>When running the main script, landmarks are made to only outline each finger of the user. This allows S.lang to recognize different gesetures without focusing on other figures within the image.</p>
         </div>
         <div class="course-col">
             <h3 style="text-align: left;">Rapid Classification</h3>
-            <img src="images/screenshot_letter(I).jpg" class="dev_photo" onclick="toggleExpand(this)">
+            <img src="assets/images/screenshot_letter(I).jpg" class="dev_photo" onclick="toggleExpand(this)">
             <p>Upon further trials, it could be concluded that gesture to text translation was made rapidly with minimal latency issues.</p>
         </div>
         <!-- next three use same class for sizing-->
         <div class="course-col">
             <h3 style="text-align: left;">Motion Tracking and Classification</h3>
-            <video controls autoplay loop muted class="dev_video"><source src="images/motion-tracking-mp.mp4" onclick="toggleExpand(this)"></video>
+            <video controls autoplay loop muted class="dev_video"><source src="assets/images/motion-tracking-mp.mp4" onclick="toggleExpand(this)"></video>
             <p>As you can see from this video, we were also able to account for gestures that may require movement such as 'J' or 'Z' letters. Next, we will want to continuously train the model on more gestures and engineer it to translate from text to gesture using DALLE models for text to image generation.</p>
         </div>
     </div>
 </section>
 
+<!--about GAN model-->
+<section id="GAN">
+    <h1 style="text-align: center;">Text to Gesuture using GAN</h1>
+    <div class=" row reveal">
+        <div class="about-col" style="text-align: center;">
+            <h3>What is a GAN model?</h3>
+                <p>A GAN (Generative Adversarial Network) is a type of AI model used to generate new data that resembles a given dataset. Its main components include the <strong>generator</strong>(creates new data) and <strong>discriminator</strong>(tries to distinguish between real data from training and fake data from the generator). The two components are trained together in a competitive process until the generator becomes proficient at producing realistic data such as images, video, speech, etc.</p>
+            <h3>What is its function in S.lang?</h3>
+                <p>When it comes to translating from text to gesture, we found that trying to capture videos and photos of all gestures and storing them for later reference was time and space consuming. To combat this, we decided to use AI in order for our model to learn patterns and eventually train itself to come up with more gestures without the need for supervised training.</p>
+        </div>
+        <div class="about-col">
+            <h3>Overview of the GAN model workflow</h3>
+            <img src="assets/images/GAN_Flow.png">
+        </div>
+
+    </div>
+
+
+</section>
 
 
 <!------- Whats Next content -------->
@@ -122,45 +141,7 @@
     </div>
 </section>       
   
-  
-<!----JavaScript for toggle menu---->
-<script>
-    //for menu
-    var navLinks = document.getElementById("navLinks");
-
-    function showMenu() {
-        navLinks.style.right = "0";
-    }
-
-    function hideMenu() {
-        navLinks.style.right = "-200px";
-    }
-
-    //for slidein/fadein effect of bullet points
-    function reveal() {
-  var reveals = document.querySelectorAll(".reveal");
-
-  for (var i = 0; i < reveals.length; i++) {
-    var windowHeight = window.innerHeight;
-    var elementTop = reveals[i].getBoundingClientRect().top;
-    var elementVisible = 150;
-
-    if (elementTop < windowHeight - elementVisible) {
-      reveals[i].classList.add("active");
-    } else {
-      reveals[i].classList.remove("active");
-    }
-  }
-}
-
-window.addEventListener("scroll", reveal);
-reveal();
-
-//this expands the photos when clicked on 
-function toggleExpand(element) {
-    element.classList.toggle('expanded');
-}
-</script> 
+<script src="assets/javascripts/script.js"></script> 
     
 </body>
 </html>    
