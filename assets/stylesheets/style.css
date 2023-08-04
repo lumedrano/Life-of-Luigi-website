@@ -3,6 +3,56 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
+
+@keyframes appear {
+    0% {
+        transform: translateY(-15%);
+        -webkit-transform: translateY(-15%);
+        -o-transform: translateY(-15%); 
+        -moz-transform: translateY(-15%);
+        opacity: 0%;
+    }
+    100% {
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -o-transform: translateY(0); 
+        -moz-transform: translateY(0);
+        opacity: 100%;
+    }
+}
+
+@keyframes appear2 {
+    0% {
+        transform: translateY(-15%);
+        -webkit-transform: translateY(-15%);
+        -o-transform: translateY(-15%); 
+        -moz-transform: translateY(-15%);
+        opacity: 0%;
+    }
+    66% {
+        transform: translateY(-15%);
+        -webkit-transform: translateY(-15%);
+        -o-transform: translateY(-15%); 
+        -moz-transform: translateY(-15%);
+        opacity: 0%;
+    }
+    100% {
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -o-transform: translateY(0); 
+        -moz-transform: translateY(0);
+        opacity: 100%;
+    }
+}
+
+@keyframes line-appear {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 50%;
+    }
+}
 .header{
     min-height: 100vh;
     width: 100%;
@@ -11,11 +61,31 @@
     background-size: cover;
     position: relative;
     overflow: hidden;
+    animation: 1s ease-out 0s 1 appear;
 }
+.subtext-animation {
+    animation: 3s ease-out 0s 1 appear2;
+}
+.header-line {
+    animation: 1.5s ease-in-out 0s 1 line-appear;
+    color: black;
+    height: 0; /* Set the height to 0 to hide the border */
+    border-style: solid;
+    border-width: 2px;
+    border-color: white; /* Set the border color to white */
+    opacity: 100%;
+    width: 50%;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    display: inline-block;
+    transition: .15s;
+}
+
 @media(max-width:700px) {
     .header{
         min-height: 35vh;
         width: 100%;
+        animation: 1s ease-out 0s 1 appear;
         background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(../images/banner.png);
         background-position: center;
         background-size: 100% 100%;
@@ -183,6 +253,9 @@ nav .fa{
 
 @media(max-width: 700px)
 {
+    .text-box {
+        margin-bottom: 5px 0; /* Add a small margin between elements */
+    }
    .nav-links ul li
     {
         display: block;
