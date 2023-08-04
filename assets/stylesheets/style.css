@@ -99,6 +99,25 @@ nav img{
     flex: 1;
     text-align: right;
 }
+.nav-links a {
+    text-transform: uppercase;
+    background-image: linear-gradient(
+        -225deg,
+        #00274c 0%,
+        #00498c 29%,
+        #00a8cc 67%,
+        #00e0ff 100%
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    font-size: 13px; /* Adjust font size as needed */
+}
 .nav-links ul li{
     list-style: none;
     display: inline-block;
@@ -568,11 +587,11 @@ h3{
       }
       .wrap .dynamic-txts{
         margin-left: 15px;
-        height: 45px;
-        line-height: 45px;
-        overflow: hidden;
+        height: 60px;
+        line-height: 60px;
+        /* overflow: hidden; */
       }
-      .dynamic-txts li{
+      .dynamic-txts li {
         list-style: none;
         color: orange;
         font-size: 30px;
@@ -580,17 +599,20 @@ h3{
         position: relative;
         top: 0;
         animation: slide 12s steps(4) infinite;
-      }
-      .dynamic-txts li span::after{
+    }
+    
+    .dynamic-txts li span::after {
         content: "";
         position: absolute;
+        top: 0;
         left: 0;
-        height: 100%;
         width: 100%;
+        height: 100%;
         background: white;
         border-left: 2px solid orange;
         animation: typing 3s steps(10) infinite;
-      }
+    }
+    
 }
 
 
@@ -796,6 +818,26 @@ h3{
 
 
 
+/*animation test*/
+.animate-character{
+    text-transform: uppercase;
+    background-image: linear-gradient(-225deg, #231557 0%, #44107a 29%, #ff1361 67%, #fff800 100%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+    font-size: 190px;
+}
+@keyframes textclip{
+    to{
+        background-position: 200% center;
+    }
+}
 
 
 
