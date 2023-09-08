@@ -260,6 +260,11 @@ nav .fa{
 {
     .text-box {
         margin-bottom: 5px 0; /* Add a small margin between elements */
+        top: 60%;
+        left: 50%;
+    }
+    .hero-btn{
+        margin-top: -30px;
     }
    .nav-links ul li
     {
