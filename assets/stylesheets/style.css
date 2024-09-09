@@ -325,79 +325,44 @@ p{
     justify-content: space-between;  
     overflow: auto;
 }
-.row_portfolio_photos{
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
     margin-top: 5%;
-    display: flex;
-    justify-content: space-between;  
-    overflow: auto;
 }
-.course-col{
-    flex-basis: 31%;
+
+.course-col {
     background: white;
     border-radius: 10px;
-    margin-bottom: 5%;
-    padding: 20px 12px;
-    box-sizing: border-box;
-    transition: .5s;
-    overflow: invisible;
+    padding: 20px;
+    transition: box-shadow 0.5s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-.bluegpt_photo{
-    width: 400px; 
-    height: 150px;
+
+.course-col:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
-.EE319K_photo{
-    width: 400px;
-    height: 200px;
+
+.project_photos {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
 }
-.spaceinv_photo{
-    width: 400px;
-    height: 200px;
-}
-.three_day_robot_photo{
-    width: 220px;
-    height: 200px;
-}
-.compli_connect{
-    width: 300px;
-    height: 400px;
-}
-h3{
+
+h3 {
     text-align: center;
     font-weight: 600;
     margin: 10px 0;
 }
-.course-col:hover{
-    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+
+@media (max-width: 700px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
-@media (max-width:700px){
-    .row{
-        flex-direction: column;
-    }
-    .row_portfolio_photos{
-        overflow: auto;    
-    }
-    .bluegpt_photo{
-        width: 200px; 
-        height: 75px;
-    }
-    .EE319K_photo{
-        width: 200px;
-        height: 100px;
-    }
-    .spaceinv_photo{
-        width: 200px;
-        height: 100px;
-    }
-    .three_day_robot_photo{
-        width: 110px;
-        height: 120px;
-    }
-    .compli_connect{
-        width: 150px;
-        height: 200px;
-    }
-} 
 
 /*---------------- campus ----------------*/
 
@@ -609,10 +574,15 @@ h3{
   }
 
 /*--------------- About Us Page --------------*/
-.project_photos.expanded{
-    height: 400px; /* Adjust the value as needed for the expanded height */
-    width: auto;
+
+.project_photos.expanded {
+    width: 100%;   /* Expand to full container width */
+    max-height: 80vh;  /* Restrict height to 80% of the viewport height */
+    object-fit: contain; /* Maintain aspect ratio */
+    transform: scale(1.2);  /* Add a slight zoom effect when expanded */
+    z-index: 1000; /* Ensure the expanded image appears above other content */
 }
+
 .wrap {
     display: flex;
     flex-direction: column;
